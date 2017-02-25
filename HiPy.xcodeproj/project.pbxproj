@@ -6,10 +6,15 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		CC31D44B1E61883000AC3B5D /* HolaMundo.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HolaMundo.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		CC31D4441E6187F400AC3B5D = {
 			isa = PBXGroup;
 			children = (
+				CC31D44B1E61883000AC3B5D /* HolaMundo.py */,
 			);
 			sourceTree = "<group>";
 		};
