@@ -1,31 +1,29 @@
 def validacionSigno (valor):
-    if(valor == "1"):
-        return True
-        print ("toy validando en true")
+    resultado = False
+    if(valor[0] == '-'):
+        newValor = valor [1:]
+        resultado = newValor.isdigit()
+    elif(valor[0] == '+'):
+        newValor = valor [1:]
+        resultado = newValor.isdigit()
     else:
-        return False
-
-def validacionNumerica (var, posicion):
-    resultado = True
-    size = len(var)
-
-    for (int i = posicion; i < size ; i++)# :P los for son diferentes
-        if (var[i].isdigit() &&  size >= 1)
-            resultado = True
-        else
-            resultado = False
+        resultado = valor.isdigit()
     return resultado
 
-#Metodo Principal?
+# Metodo principal ?
 
 print ("Hola hola ;)")
-valor = str (input ("Dame un numero, que soy todo un adivino ... "))
+valor = "NecesitoUnValorCualquiera"
 
-if (validacionSigno(valor) == True):
-    if(valor == "1"):
-        print ("valido true :)")
+while ( validacionSigno(valor) == False ):
+    valor = str (input ("Dame un numero, que soy todo un adivino ... "))
+    if ( validacionSigno(valor) == True ):
+        if ( valor[0] == '+' ):
+            newValor = valor [1:]
+            print ("El numero que me diste fue: " , newValor , " :P \nChao chao.\n")
+            break
+        else:
+            print ("El numero que me diste fue: " , valor , " :P \nChao chao.\n")
+            break
     else:
-        print ("El número que me diste fue: ", valor, " :P \nChao chao.\n")
-else:
-    print ("\nNo me diste ningun numero :( ")
-
+        print ("No me diste ningun numero :(")
